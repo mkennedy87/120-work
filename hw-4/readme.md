@@ -1,5 +1,3 @@
-# Empty p5 sketch.
+Michael Kennedy
 
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
-
-Current p5 version -> 0.7.1
+This week I created a self portrait just out of the 2d primitive shapes, I gotta say, I’m pretty proud of myself. I mostly used the ellipse function, but I tried to get a few other shapes in there. I made sure to use arc because I didn’t totally understand it, so I made sure I could get it to do what I wanted it to do. I started the assignment by sketching out a drawing of myself using only the shapes that could be used in p5. After that, I wrote down the order in which I was going to create each shape to make sure that it was correct for when I actually got to it. I actually had barely any problems, really the only thing that kept tripping me up was remembering when to put in negatives. I did have 2 vertical lines I was going to ad in to help with the nose, but I couldn’t get it to work. I didn’t really know if I wanted the lines in the first place so I decided it wasn’t worth the headache.
