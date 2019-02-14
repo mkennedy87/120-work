@@ -1,8 +1,9 @@
 function setup() {
   createCanvas( windowWidth, 800 );
-
-
 }
+
+let tireAngle = 0;
+let tireRotationRate = 0;
 
 function draw() {
   // sky
@@ -22,13 +23,16 @@ function draw() {
     fill( 155 );
     rect( 0, 350, windowWidth, 25 );
     rect( 0, 675, windowWidth, 25 );
-
+    tireRotationRate = ( mouseX * .1 ) -20;
+    tireAngle = tireAngle + tireRotationRate;
   noCursor();
   // car sandbox
   push();
   // make car follow mouse
   translate( mouseX, mouseY );
+
   push();
+
   // car body
   fill( 255, 0, 0 );
   rect( -250, 0, 500, 100 );
@@ -42,25 +46,44 @@ function draw() {
   rect( -130, 20, 20, 5 );
   // front dh
   rect( -10, 20, 20, 5 );
+
   //r bumper
   rect( -270, 80, 20, 20 );
   // fb
   rect( 250, 80, 20, 20 );
+
   // rear tire
   fill( 50 );
   ellipse( -150, 100, 100 );
   // rim
   fill( 150 );
   ellipse( -150, 100, 60 );
+  push();
+  // spinny line
+  translate( -150, 100 );
+  rotate( radians(tireAngle) );
+  stroke(25);
+  strokeWeight(2);
+  line( 0, 0, 30, 0 );
+  pop();
   // cap
   fill(255);
   ellipse( -150, 100, 20 );
+
   // front tire
   fill( 50 );
   ellipse( 150, 100, 100 );
   // rim
   fill( 150 );
   ellipse( 150, 100, 60 );
+  push();
+  // spinny line
+  translate( 150, 100 );
+  rotate( radians(tireAngle) );
+  stroke(25);
+  strokeWeight(2);
+  line( 0, 0, 30, 0 );
+  pop();
   // cap
   fill(255);
   ellipse( 150, 100, 20 );
