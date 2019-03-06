@@ -1,11 +1,5 @@
-# Empty p5 sketch.
+Mike Kennedy
+Week 8
 
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
 
-Current p5 version -> 0.7.1
-
-1. Summarize the work you did this homework cycle. Paying particular attention to the individual choices you made.
-2. What steps did you take to complete the assignment?
-3. Did you have any problems or issues? How did you solve these? Did you post about these to the class repo issue tracker? Did you receive any useful feedback from your classmates?
-4. Is there anything in particular you learned that you would like to discuss further?
-5. What issues did you help your fellow classmates out with this past homework cycle?
+  This homework cycle I learned more about for loops and how little code you need to fill a page. I kept forgetting to declare my variables before assigning value, and broke the code at least once. I drew my shapes first before declaring the variables just to make sure I got the shapes and sizes I wanted AND the starting points. I also wanted to use an if statement for the background color, and I could not figure out why I couldn't get it to update. I had it in my head that I should make the variables for the color, global variables, but I was convinced that I didn't need to. Turns out that I was wrong. No one has been posting issues to github, helping others really isn't an option.
