@@ -9,8 +9,8 @@ function setup(){
 let circleSize = 20;
 let posX = 0;
 let posY = 0;
-let ballSpeedX = 5 ;
-let ballSpeedY = 5;
+let ballSpeedX = .2 ;
+let ballSpeedY = .2;
 
 function draw(){
   let pos_x = floor(random( 800 ) );
@@ -21,8 +21,8 @@ function draw(){
   ellipse( pos_x, pos_y, circleSize, circleSize );
 
 
-  let posGoX = ballSpeedX;
-  let posGoY = ballSpeedY;
+  let posGoX = ballSpeedX * random( round( 10 ));
+  let posGoY = ballSpeedY * random( round( 10 ));
 
   posX += posGoX;
   posY += posGoY;
@@ -34,7 +34,7 @@ if( posY >= height || posY <= 0) {
   ballSpeedY = ballSpeedY * -1;
 }
 
-  fill( 255, 0, 0, 15 );
+  fill( 255, 0, 0, 1 );
   ellipse( posX, posY, 50, 50);
 
 
