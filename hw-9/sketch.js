@@ -1,11 +1,23 @@
+let txtAr = ["HEY!", "THIS", "SKETCH", "LOOKS", "KINDA", "FAMILIAR!", "!!!!!!!!!!!!!"];
+
 function setup() {
-  createCanvas( windowWidth, 1000);
+  createCanvas( 1200, 600);
+// make time to read text
+  frameRate(1)
 }
+
+let idx = 0;
 function draw() {
   background( 255, 255, 0 );
+// text size
+  textSize(50)
 // call mikeHead
   mikeHead();
-
+  // call text balloon
+  speechBubble();
+  text( txtAr[idx], 350, 0);
+// increase array by one each frame
+  idx = ( idx + 1) % txtAr.length;
 
 }
   // make head a function
@@ -85,5 +97,14 @@ ellipse( -40, 0, 30, 60 );
   rect( 20, -60, 90, 10 );
 rect( -20, -60, -90, 10 );
   pop();
+pop();
+}
+
+function speechBubble(){
+push();
+  noStroke();
+  fill(255);
+  ellipse( 450, -15, 400, 200 );
+  triangle( 200, 100, 375, -20, 450, 0);
 pop();
 }
