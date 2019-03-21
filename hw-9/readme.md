@@ -1,11 +1,8 @@
-# Empty p5 sketch.
+# Mike Kennedy
 
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
+## Homework week 10
 
-Current p5 version -> 0.7.1
 
-1. Summarize the work you did this homework cycle. Paying particular attention to the individual choices you made.
-2. What steps did you take to complete the assignment?
-3. Did you have any problems or issues? How did you solve these? Did you post about these to the class repo issue tracker? Did you receive any useful feedback from your classmates?
-4. Is there anything in particular you learned that you would like to discuss further?
-5. What issues did you help your fellow classmates out with this past homework cycle?
+
+
+For this assignment ( I named it hw-9, but wasn't sure if it was actually supposed to be hw-10) I defined my own functions which really does make it easier to keep the code straight when reading through it. I also used an array for the first time. I built on top of an old assignment by converting a drawing into a function, and then created a second function for the speech balloon. After that, I created an array so that the drawing would cycle through text. I also changed the frame rate to 1 so the text was readable. I chose this drawing to reuse because it is my favorite that I have done in this class. I had to check comparing code with examples in this week's lesson and last weeks in order to complete the assignment. Can't say that I had any issues other than a brief mistake I made when declaring the array. It looks like there was an issue on github this week but I believe it is too late to join in the conversation.
