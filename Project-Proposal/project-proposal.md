@@ -11,6 +11,7 @@ sky layer
 mountain layer img
 tree layer img
 tree class, img
+make trees on array and randomly place throughout middle ground.
 tent layer Image
 camper layer, if time permits, if he's clicked on animated page turn
 anymore time I'll add a sound loop
