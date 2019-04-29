@@ -19,7 +19,7 @@ function draw() {
   background( 200, 150 ,0 );
 
   for ( let i = 0; i < bubbles.length; i++ ) {
-  bubbles[i].bubbleCheck(bubbles, i);
+  // bubbles[i].bubbleCheck(bubbles, i);
   bubbles[i].move();
   bubbles[i].edgeCheck();
   bubbles[i].display();
@@ -61,17 +61,22 @@ edgeCheck() {
   }
 }
 
-bubbleCheck(otherBubbles, myId) {
-  for ( let n = 0; n < otherBubbles.length; n++ ) {
-    if (n != myId) {
-      let d = dist( this.posX, this.posY, otherBubbles[n].posY);
-      let combinedR = this.rad + otherBubbles[n].rad;
-
-      if (d <= combinedR) {
-        this.deltaX *= -1;
-        this.deltaY *= -1;
-      }
-    }
-  }
+bubbleCollide() {
+  for ( let ow = bubbles.length-1; ow>= 0; ow--)
+  if (bubbles[ow].contains()) {bubbles.splice(ow, 1)}
 }
+
+// bubbleCheck(otherBubbles, myId) {
+//   for ( let n = 0; n < otherBubbles.length; n++ ) {
+//     if (n != myId) {
+//       let d = dist( this.posX, this.posY, otherBubbles[n].posX, otherBubbles[n].posY);
+//       let combinedR = this.rad + otherBubbles[n].rad;
+//
+//       if (d <= combinedR) {
+//         this.deltaX *= -1;
+//         this.deltaY *= -1;
+//       }
+//     }
+//   }
+// }
 }
