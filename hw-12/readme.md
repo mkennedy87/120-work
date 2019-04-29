@@ -1,11 +1,3 @@
-# Empty p5 sketch.
-
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
-
-Current p5 version -> 0.7.1
-
-1. Summarize the work you did this homework cycle. Paying particular attention to the individual choices you made.
-2. What steps did you take to complete the assignment?
-3. Did you have any problems or issues? How did you solve these? Did you post about these to the class repo issue tracker? Did you receive any useful feedback from your classmates?
-4. Is there anything in particular you learned that you would like to discuss further?
-5. What issues did you help your fellow classmates out with this past homework cycle?
+# Mike Kennedy
+# Homework Week 12
+This week I relied heavily on the examples provided in class to help me learn about objects interacting with each other. What I wanted the objects to do was to delete themselves when they ran into each other and then respawn. I couldn't quite hack it. I got up to the point of making them interact with eachother, but I couldn't figure out how to change the code into what I wanted. I do like the colors that I created in this. In order to get something turned in I decided to turn in a sketch that is very similar to what we've already been shown, rather than turning in a code that just didn't work. Another area I had trouble with was where all the objects spawed, I had a little grasp on it, but didn't totally understand why they all spawned at the top of the canvas. My assignment is far too late to be asking for help, so I won't be posting in github.
