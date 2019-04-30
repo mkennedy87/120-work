@@ -1,3 +1,9 @@
+let trees;
+
+function preload() {
+  trees = loadImage('./images/trees.png');
+
+}
 // let sun;
 // sun.d = 100
 
@@ -13,6 +19,8 @@ function draw() {
   noStroke();
   rect( 0, 0, 1600, 900 );
   pop();
+
+    image( trees, 0, 0 );
 // sun
 push();
 // tanslate( 200, 200 );
@@ -21,6 +29,9 @@ noStroke();
 fill( 255, 255, 0);
 ellipse( mouseX, mouseY, 100 );
 pop();
+
+
+
 }
 
 // }
