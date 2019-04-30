@@ -18,8 +18,15 @@ let tentA_img;
 let camperA;
 let camperA_img;
 
+// let birdSong;
+let fireSong;
+
+let cloud_deltaX = -525;
 
 function preload() {
+  // birdSong = loadSound("sounds/birds.wav");
+  fireSong = loadSound("sounds/campfire.wav");
+
   trees = loadImage('./images/trees.png');
   mountains = loadImage('./images/mountains.png');
   tent = loadImage('./images/tent.png');
@@ -41,6 +48,8 @@ function preload() {
 
 function setup(){
   createCanvas( 1600, 900 );
+  birdSong.play();
+  fireSong.play();
   // fire[0] new FireStuff( 800, 800, fire_img, 0 );
 }
 
@@ -62,7 +71,8 @@ fill( 255, 255, 0);
 ellipse( mouseX, mouseY, 100 );
 pop();
 // assemble the images
-image( cloud, 0, 0 );
+
+image( cloud, cloud_deltaX, 0 );
 image( mountains, 0, 0 );
 image( mountains_night, 0 ,0 );
 image( trees, 0, 0 );
@@ -70,6 +80,10 @@ image( tent, 0, 0 );
 image( camper, 0, 0 );
 image( fire_back, 0, 0 );
 
+// cloud_deltaX++;
+if( cloud_deltaX > 1600 ){
+  cloud_deltaX = - 525;
+} else { cloud_deltaX++ };
 for (let i = 0; i < fire.length; i++) {
   fire[i].frame();
 }
