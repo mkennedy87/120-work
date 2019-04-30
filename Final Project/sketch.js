@@ -41,7 +41,7 @@ function preload() {
 
 function setup(){
   createCanvas( 1600,900 );
-  // fire[0] new FireStuff( 800, 800, fire_img );
+  fire[0] new FireStuff( 800, 800, fire_img, 0 );
 }
 
 function draw() {
@@ -81,12 +81,12 @@ image( fire_front, 0, 0 );
 }
 
 class FireStuff {
-  constructor(init_x, init_y, img ){
+  constructor(init_x, init_y, img, orientation ){
     this.pos = {
       x: init_x,
       y: init_y
     };
-    // this.orientation = orientation;
+    this.orientation = orientation;
 
     this.image = img;
 
@@ -111,8 +111,8 @@ class FireStuff {
     this.animate();
   }
   display() {
-    push();
-    translate( this.pos.x, this.pos.y );
+    // push();
+    // translate( this.pos.x, this.pos.y );
 
     image(
       this.image,
@@ -122,7 +122,7 @@ class FireStuff {
       this.size.w, this.size.h
 
     );
-    pop();
+    // pop();
 
   }
   animate() {
