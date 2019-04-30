@@ -17,7 +17,7 @@ let fire_img;
 // let tentA_img;
 // let camperA;
 // let camperA_img;
-// let fire_frame_1;
+let fire_frame_1;
 //
 // let fire_frame_2;
 // let fire_frame_3;
@@ -45,7 +45,7 @@ function preload() {
   fire_img = loadImage('./images/fire_sprite.png');
 
   song = loadSound("campfire.wav");
-  // fire_frame_1 = loadImage('./images/fire_frame_1.png');
+  fire_frame_1 = loadImage('./images/fire_frame_1.png');
   // fire_frame_2 = loadImage('./images/fire_frame_2.png');
   // fire_frame_3 = loadImage('./images/fire_frame_3.png');
   // fire_frame_4 = loadImage('./images/fire_frame_4.png');
@@ -57,7 +57,7 @@ function preload() {
 
 function setup(){
   createCanvas( 1600, 900 );
-  song.play();
+  // song.play();
   // fire[0] new FireStuff( 800, 800, fire_img, 0 );
 }
 // let fire_pit = [ fire_frame_1, fire_frame_2, fire_frame_3, fire_frame_4 ];
@@ -107,6 +107,7 @@ for (let i = 0; i < fire.length; i++) {
   fire[i].frame();
 }
 // idx = ( idx + 1 ) % fire_pit.length;
+// image( fire_frame_1, 0, 0 );
 image( fire_front, 0, 0 );
 
 
@@ -146,6 +147,11 @@ class FireStuff {
   display() {
     // push();
     // translate( this.pos.x, this.pos.y );
+    // if (this.orientation === 0) {
+   //     scale(1,1);
+   // } else if (this.orientation === 1) {
+   //     scale(-1,1);
+   // }
 
 // i think this looks good too, no problems
     image(
