@@ -26,7 +26,7 @@ function preload() {
   camper = loadImage('./images/camper.png');
   fire_back = loadImage('./images/fire_back.png');
   fire_front = loadImage('./images/fire_front.png');
-  cloud = loadImage('./images/cloud.png');
+  cloud = loadImage('./images/cloud_update.png');
   mountains_night = loadImage('./images/mountains_night.png')
 
   camper_glow = loadImage('./images/camper_glow.png');
