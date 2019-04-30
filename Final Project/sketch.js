@@ -13,10 +13,10 @@ let tent_glow;
 // animation stuff
 let fire = [];
 let fire_img;
-// let tentA = [];
-// let tentA_img;
-// let camperA;
-// let camperA_img;
+let tentA = [];
+let tentA_img;
+let camperA;
+let camperA_img;
 
 
 function preload() {
@@ -29,9 +29,9 @@ function preload() {
   cloud = loadImage('./images/cloud.png');
   mountains_night = loadImage('./images/mountains_night.png')
 
-  // camper_glow = loadImage('./images/camper_glow.png');
-  // cloud_glow = loadImage('./images/cloud_glow.png');
-  // tent_glow = loadImage('./images/tent_glow.png');
+  camper_glow = loadImage('./images/camper_glow.png');
+  cloud_glow = loadImage('./images/cloud_glow.png');
+  tent_glow = loadImage('./images/tent_glow.png');
   fire_img = loadImage('./images/fire_sprite.png');
   // tentA_img = loadImage();
   // camperA_img = loadImage();
@@ -40,8 +40,8 @@ function preload() {
 // sun.d = 100
 
 function setup(){
-  createCanvas( 1600,900 );
-  fire[0] new FireStuff( 800, 800, fire_img, 0 );
+  createCanvas( 1600, 900 );
+  // fire[0] new FireStuff( 800, 800, fire_img, 0 );
 }
 
 function draw() {
@@ -105,7 +105,7 @@ class FireStuff {
       [ 427, 427 ]
     ];
   }
-
+// no problems below this po
   frame() {
     this.display();
     this.animate();
@@ -114,6 +114,7 @@ class FireStuff {
     // push();
     // translate( this.pos.x, this.pos.y );
 
+// i think this looks good too, no problems
     image(
       this.image,
       0, 0,
@@ -123,7 +124,7 @@ class FireStuff {
 
     );
     // pop();
-
+//  the code here is exactly as the example, problem not here
   }
   animate() {
     if (frameCount % this.speed === 0) {
