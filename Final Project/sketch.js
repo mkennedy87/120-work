@@ -13,20 +13,23 @@ let tent_glow;
 // animation stuff
 let fire = [];
 let fire_img;
-let tentA = [];
-let tentA_img;
-let camperA;
-let camperA_img;
-
-// let birdSong;
-let fireSong;
+// let tentA = [];
+// let tentA_img;
+// let camperA;
+// let camperA_img;
+// let fire_frame_1;
+//
+// let fire_frame_2;
+// let fire_frame_3;
+// let fire_frame_4;
+let song;
 
 let cloud_deltaX = -525;
 
-function preload() {
-  // birdSong = loadSound("sounds/birds.wav");
-  fireSong = loadSound("sounds/campfire.wav");
+let the_alpha;
 
+
+function preload() {
   trees = loadImage('./images/trees.png');
   mountains = loadImage('./images/mountains.png');
   tent = loadImage('./images/tent.png');
@@ -40,6 +43,12 @@ function preload() {
   cloud_glow = loadImage('./images/cloud_glow.png');
   tent_glow = loadImage('./images/tent_glow.png');
   fire_img = loadImage('./images/fire_sprite.png');
+
+  song = loadSound("campfire.wav");
+  // fire_frame_1 = loadImage('./images/fire_frame_1.png');
+  // fire_frame_2 = loadImage('./images/fire_frame_2.png');
+  // fire_frame_3 = loadImage('./images/fire_frame_3.png');
+  // fire_frame_4 = loadImage('./images/fire_frame_4.png');
   // tentA_img = loadImage();
   // camperA_img = loadImage();
 }
@@ -48,16 +57,17 @@ function preload() {
 
 function setup(){
   createCanvas( 1600, 900 );
-  birdSong.play();
-  fireSong.play();
+  song.play();
   // fire[0] new FireStuff( 800, 800, fire_img, 0 );
 }
-
+// let fire_pit = [ fire_frame_1, fire_frame_2, fire_frame_3, fire_frame_4 ];
+// let idx = 0;
 function draw() {
   background( 125, 125, 255 );
   push();
 // changing sky, need to make alpha a variable
-  fill( 200, 40, 100 );
+  the_alpha = map(mouseX, 0, 1600, 0, 255);
+  fill( 200, 40, 100, the_alpha );
   noStroke();
   rect( 0, 0, 1600, 900 );
   pop();
@@ -77,17 +87,26 @@ image( mountains, 0, 0 );
 image( mountains_night, 0 ,0 );
 image( trees, 0, 0 );
 image( tent, 0, 0 );
+if( mouseX > 1100 && mouseX < 1600 && mouseY > 450 && mouseY < 850 ) {
+  image(tent_glow, 0, 0 );
+}
 image( camper, 0, 0 );
+if( mouseX > 150 && mouseX < 350 && mouseY > 600 && mouseY < 900 ) {
+
+    image(camper_glow, 0, 0);
+}
 image( fire_back, 0, 0 );
 
 // cloud_deltaX++;
 if( cloud_deltaX > 1600 ){
   cloud_deltaX = - 525;
 } else { cloud_deltaX++ };
+
+
 for (let i = 0; i < fire.length; i++) {
   fire[i].frame();
 }
-
+// idx = ( idx + 1 ) % fire_pit.length;
 image( fire_front, 0, 0 );
 
 
