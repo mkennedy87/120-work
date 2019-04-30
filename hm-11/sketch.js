@@ -40,7 +40,7 @@ class ObjectBuild {
 
 // update objects
 frame() {
-  this.objectAngle();
+  this.edgeCheck();
   this.display();
   this.move();
 }
@@ -57,15 +57,7 @@ display() {
     pop();
 }
 
-objectAngle() {
-  // rotate( PI, this.spin);
-}
-
-move() {
-  this.loc_x ++;
-  this.loc_y ++;
-
-  if (this.loc_x >= width) {
+edgeCheck() {  if (this.loc_x >= width) {
           this.move_x *= -1;
           this.loc_x = width - abs(this.move_x);
       } else if (this.loc_x <= 0) {
@@ -78,5 +70,13 @@ move() {
           this.move_y *= -1;
           this.loc_y = abs(this.move_y);
       }
+  // rotate( PI, this.spin);
+}
+
+move() {
+  this.loc_x += this.move_x;
+  this.loc_y += this.move_y;
+
+
     }
 }
